@@ -1,0 +1,451 @@
+{
+  "themesVersion": 1,
+  "objID": "6666cd76-f969-5646-9e7b-e39d750cc7d9",
+  "settings": {
+    "objID": "e007d988-9fba-797d-72e9-efc33ca6d05c",
+    "general": {
+      "objID": "fd434352-2277-c4a8-e87e-e96cfcbf2305",
+      "projectVersion": "v3",
+      "projectType": "lvgl",
+      "lvglVersion": "8.3",
+      "extensions": [],
+      "imports": [],
+      "flowSupport": false,
+      "displayWidth": 800,
+      "displayHeight": 480,
+      "displayBorderRadius": 0,
+      "colorFormat": "BGR",
+      "resourceFiles": [],
+      "hiddenWidgetLines": "dimmed",
+      "dimmedLinesOpacity": "20"
+    },
+    "build": {
+      "objID": "72794a43-a0fc-13c2-7eb5-67dd952141a4",
+      "configurations": [
+        {
+          "objID": "bba0546c-06b8-604d-c43e-ecf1963e7492",
+          "name": "Default"
+        }
+      ],
+      "files": [
+        {
+          "objID": "2a217cfa-7526-43d3-9e6e-3f5480ac533a",
+          "fileName": "screens.h",
+          "template": "#ifndef EEZ_LVGL_UI_SCREENS_H\r\n#define EEZ_LVGL_UI_SCREENS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_SCREENS_DECL}\r\n//${eez-studio LVGL_SCREENS_DECL_EXT}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_SCREENS_H*/"
+        },
+        {
+          "objID": "59aa803b-9337-45bd-b3df-39185dd111ab",
+          "fileName": "screens.c",
+          "template": "#include <string.h>\n\n#include \"screens.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n#include \"actions.h\"\n#include \"vars.h\"\n#include \"styles.h\"\n#include \"ui.h\"\n\n//${eez-studio LVGL_SCREENS_DEF}\n//${eez-studio LVGL_SCREENS_DEF_EXT}"
+        },
+        {
+          "objID": "294148cd-7e85-4624-9e84-45c36ad29613",
+          "fileName": "actions.h",
+          "template": "#ifndef EEZ_LVGL_UI_EVENTS_H\r\n#define EEZ_LVGL_UI_EVENTS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_ACTIONS_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_EVENTS_H*/"
+        },
+        {
+          "objID": "24906c16-99f5-4046-b6be-5550c504d999",
+          "fileName": "vars.h",
+          "template": "#ifndef EEZ_LVGL_UI_VARS_H\r\n#define EEZ_LVGL_UI_VARS_H\r\n\r\n#include <stdint.h>\r\n#include <stdbool.h>\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n// enum declarations\r\n\r\n//${eez-studio FLOW_ENUMS}\r\n\r\n// Flow global variables\r\n\r\n//${eez-studio FLOW_GLOBAL_VARIABLES_ENUM}\r\n\r\n// Native global variables\r\n\r\n//${eez-studio LVGL_VARS_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_VARS_H*/"
+        },
+        {
+          "objID": "7111ff51-bbd1-4e8e-a194-0feb85c030b5",
+          "fileName": "structs.h",
+          "template": "#ifndef EEZ_LVGL_UI_STRUCTS_H\n#define EEZ_LVGL_UI_STRUCTS_H\n\n//${eez-studio EEZ_FOR_LVGL_CHECK}\n\n#if defined(EEZ_FOR_LVGL)\n\n#include <eez/flow/flow.h>\n#include <stdint.h>\n#include <stdbool.h>\n\n#include \"vars.h\"\n\nusing namespace eez;\n\n//${eez-studio FLOW_STRUCTS}\n\n//${eez-studio FLOW_STRUCT_VALUES}\n\n#endif\n\n#endif /*EEZ_LVGL_UI_STRUCTS_H*/\n"
+        },
+        {
+          "objID": "3bf2a545-c242-4855-a11d-75edc6df3e40",
+          "fileName": "images.h",
+          "template": "#ifndef EEZ_LVGL_UI_IMAGES_H\r\n#define EEZ_LVGL_UI_IMAGES_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_IMAGES_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_IMAGES_H*/"
+        },
+        {
+          "objID": "23fa226c-e038-4d85-cfea-d4c0b32af3f9",
+          "fileName": "images.c",
+          "template": "#include \"images.h\"\n\n//${eez-studio LVGL_IMAGES_DEF}"
+        },
+        {
+          "objID": "4ddbc692-8a18-40bd-853c-b846ee0e9b6f",
+          "fileName": "fonts.h",
+          "template": "#ifndef EEZ_LVGL_UI_FONTS_H\r\n#define EEZ_LVGL_UI_FONTS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_FONTS_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_FONTS_H*/"
+        },
+        {
+          "objID": "ef0fef1c-b874-4d91-d19b-76e543502f0d",
+          "fileName": "styles.h",
+          "template": "#ifndef EEZ_LVGL_UI_STYLES_H\r\n#define EEZ_LVGL_UI_STYLES_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_STYLES_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_STYLES_H*/"
+        },
+        {
+          "objID": "52f2c3e4-7ea0-42f1-c1b2-068bcb5cef97",
+          "fileName": "styles.c",
+          "template": "#include \"styles.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n\n//${eez-studio LVGL_STYLES_DEF}\n"
+        },
+        {
+          "objID": "3aee4499-ce17-466a-be88-bbf41ff7f861",
+          "fileName": "ui.h",
+          "template": "#ifndef EEZ_LVGL_UI_GUI_H\n#define EEZ_LVGL_UI_GUI_H\n\n//${eez-studio LVGL_INCLUDE}\n\n//${eez-studio EEZ_FOR_LVGL_CHECK}\n\n#if defined(EEZ_FOR_LVGL)\n#include <eez/flow/lvgl_api.h>\n#endif\n\n#if !defined(EEZ_FOR_LVGL)\n#include \"screens.h\"\n#endif\n\n#ifdef __cplusplus\nextern \"C\" {\n#endif\n\n//${eez-studio GUI_ASSETS_DECL}\n\nvoid ui_init();\nvoid ui_tick();\n\n#if !defined(EEZ_FOR_LVGL)\nvoid loadScreen(enum ScreensEnum screenId);\n#endif\n\n#ifdef __cplusplus\n}\n#endif\n\n#endif // EEZ_LVGL_UI_GUI_H"
+        },
+        {
+          "objID": "fc47c668-6a59-47fa-fe5e-fe419b98ca2a",
+          "fileName": "ui.c",
+          "template": "#if defined(EEZ_FOR_LVGL)\n#include <eez/core/vars.h>\n#endif\n\n#include \"ui.h\"\n#include \"screens.h\"\n#include \"images.h\"\n#include \"actions.h\"\n#include \"vars.h\"\n\n//${eez-studio GUI_ASSETS_DEF}\n\n//${eez-studio LVGL_NATIVE_VARS_TABLE_DEF}\n\n//${eez-studio LVGL_ACTIONS_ARRAY_DEF}\n\n#if defined(EEZ_FOR_LVGL)\n\nvoid ui_init() {\n    eez_flow_init(assets, sizeof(assets), (lv_obj_t **)&objects, sizeof(objects), images, sizeof(images), actions);\n}\n\nvoid ui_tick() {\n    eez_flow_tick();\n    tick_screen(g_currentScreen);\n}\n\n#else\n\n#include <string.h>\n\nstatic int16_t currentScreen = -1;\n\nstatic lv_obj_t *getLvglObjectFromIndex(int32_t index) {\n    if (index == -1) {\n        return 0;\n    }\n    return ((lv_obj_t **)&objects)[index];\n}\n\nvoid loadScreen(enum ScreensEnum screenId) {\n    currentScreen = screenId - 1;\n    lv_obj_t *screen = getLvglObjectFromIndex(currentScreen);\n    lv_scr_load_anim(screen, LV_SCR_LOAD_ANIM_FADE_IN, 200, 0, false);\n}\n\nvoid ui_init() {\n    create_screens();\n//${eez-studio LVGL_LOAD_FIRST_SCREEN}\n}\n\nvoid ui_tick() {\n    tick_screen(currentScreen);\n}\n\n#endif\n"
+        }
+      ],
+      "destinationFolder": "src\\ui",
+      "separateFolderForImagesAndFonts": false,
+      "imageExportMode": "source",
+      "fontExportMode": "source",
+      "fileSystemPath": "",
+      "lvglInclude": "lvgl.h",
+      "screensLifetimeSupport": false,
+      "generateSourceCodeForEezFramework": false,
+      "compressFlowDefinition": false,
+      "executionQueueSize": 1000,
+      "expressionEvaluatorStackSize": 20
+    }
+  },
+  "variables": {
+    "objID": "c6c71e16-53e1-217f-d03b-cef56c6b037a",
+    "globalVariables": [],
+    "structures": [],
+    "enums": []
+  },
+  "actions": [
+    {
+      "objID": "cb197de1-faed-4369-8610-796ee97a32e1",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "userProperties": [],
+      "name": "button_clicked"
+    }
+  ],
+  "userPages": [
+    {
+      "objID": "4b40eba7-b31a-468a-b887-11dfd0b6637f",
+      "components": [
+        {
+          "objID": "f90b60d0-0665-1f2d-d7bb-8672ca4b6e2e",
+          "type": "LVGLScreenWidget",
+          "left": 0,
+          "top": 0,
+          "width": 800,
+          "height": 480,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "fb6a8ebf-ffb2-c572-e37b-06078605c72c",
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "px",
+          "heightUnit": "px",
+          "children": [
+            {
+              "objID": "1521f1ca-db85-4a66-d420-3eefbe222ab0",
+              "type": "LVGLButtonMatrixWidget",
+              "left": 202,
+              "top": 86,
+              "width": 449,
+              "height": 362,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "755b78da-2a75-43ea-9f89-0bae44343889",
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "34e5404d-ed0c-4847-bc04-61219b69096e",
+                  "eventName": "PRESSED",
+                  "handlerType": "action",
+                  "action": "button_clicked",
+                  "userData": 0
+                }
+              ],
+              "identifier": "keypad",
+              "leftUnit": "px",
+              "topUnit": "px",
+              "widthUnit": "px",
+              "heightUnit": "px",
+              "children": [],
+              "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
+              "hiddenFlagType": "literal",
+              "clickableFlag": true,
+              "clickableFlagType": "literal",
+              "flagScrollbarMode": "",
+              "flagScrollDirection": "",
+              "scrollSnapX": "",
+              "scrollSnapY": "",
+              "checkedState": false,
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
+              "states": "",
+              "localStyles": {
+                "objID": "bcf0e03f-0ef8-4bf9-9628-7d8ebba40429",
+                "definition": {
+                  "MAIN": {
+                    "DEFAULT": {
+                      "layout": "GRID",
+                      "grid_row_dsc_array": "",
+                      "grid_column_dsc_array": "",
+                      "flex_flow": "ROW",
+                      "bg_color": "#8d956b",
+                      "text_font": "MONTSERRAT_24"
+                    }
+                  }
+                }
+              },
+              "group": "",
+              "groupIndex": 0,
+              "buttons": [
+                {
+                  "objID": "143bbd5b-feae-43a8-9730-86d5582a67e5",
+                  "text": "1",
+                  "width": 1
+                },
+                {
+                  "objID": "8814fac8-9076-4df9-a6b8-1ad6b2a0289a",
+                  "text": "2",
+                  "width": 1
+                },
+                {
+                  "objID": "bb809c5f-9423-40ce-ef16-539c24c3f161",
+                  "text": "3",
+                  "width": 1
+                },
+                {
+                  "objID": "6eefada7-ed4e-45d3-e6e8-04936c271f4f",
+                  "newLine": true,
+                  "text": "Btn",
+                  "width": 1
+                },
+                {
+                  "objID": "75eabbd6-3390-449d-c609-ddaba6d383a6",
+                  "text": "4",
+                  "width": 1
+                },
+                {
+                  "objID": "585c5492-9d74-4990-900b-fe413b947b9f",
+                  "text": "5",
+                  "width": 1
+                },
+                {
+                  "objID": "e2f02788-8c48-46b0-a8d0-1d4f9038286f",
+                  "text": "6",
+                  "width": 1
+                },
+                {
+                  "objID": "0359e8e4-1a52-4a5e-fcea-70cc71c98a0b",
+                  "newLine": true,
+                  "text": "Btn",
+                  "width": 1
+                },
+                {
+                  "objID": "38281fb8-37f9-4222-c41f-b6c1ff568aff",
+                  "text": "7",
+                  "width": 1
+                },
+                {
+                  "objID": "3641d5ed-3f37-4fbd-9e24-ea4977be6686",
+                  "text": "8",
+                  "width": 1
+                },
+                {
+                  "objID": "f94b30d8-4315-42d1-bacb-d7d95542da61",
+                  "newLine": false,
+                  "text": "9",
+                  "width": 1
+                },
+                {
+                  "objID": "adc3f153-530d-4085-d72f-d9972439d21c",
+                  "newLine": true,
+                  "text": "Btn",
+                  "width": 1
+                },
+                {
+                  "objID": "56b02031-2dff-4a30-ee28-d6305d7e4b8f",
+                  "text": "0",
+                  "width": 1
+                },
+                {
+                  "objID": "8a9cf51b-3c0f-4186-842a-becde94b37a4",
+                  "text": ".",
+                  "width": 1
+                },
+                {
+                  "objID": "02f683e7-b6a1-4842-c4d2-27e7144823b3",
+                  "text": "C",
+                  "width": 1
+                },
+                {
+                  "objID": "4d452632-211d-4ee3-896b-216bbc6b7b8e",
+                  "newLine": true,
+                  "text": "Btn",
+                  "width": 1
+                },
+                {
+                  "objID": "bbdbf459-6607-42fe-8e36-bcce7252eb78",
+                  "text": "+",
+                  "width": 1
+                },
+                {
+                  "objID": "6c56bc36-0fe7-4400-8151-96c0b7efaa4f",
+                  "text": "-",
+                  "width": 1
+                },
+                {
+                  "objID": "dcbfbea9-e86e-479a-af1c-1c884bce78ff",
+                  "text": "*",
+                  "width": 1
+                },
+                {
+                  "objID": "87a0f1ce-e43f-438d-f392-639f62ff7f71",
+                  "text": "/",
+                  "width": 1
+                },
+                {
+                  "objID": "07a6fc92-dc53-49e2-b27e-27252f3d6ef6",
+                  "text": "=",
+                  "width": 1
+                }
+              ],
+              "oneCheck": false
+            },
+            {
+              "objID": "22be51c0-7f7e-45f7-cb8a-eb5fe32ea9cd",
+              "type": "LVGLTextareaWidget",
+              "left": 202,
+              "top": 27,
+              "width": 449,
+              "height": 59,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "85c895e2-0841-4687-f114-c50f9b2742f5",
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "identifier": "textarea1",
+              "leftUnit": "px",
+              "topUnit": "px",
+              "widthUnit": "px",
+              "heightUnit": "px",
+              "children": [],
+              "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
+              "hiddenFlagType": "literal",
+              "clickableFlag": true,
+              "clickableFlagType": "literal",
+              "flagScrollbarMode": "",
+              "flagScrollDirection": "",
+              "scrollSnapX": "",
+              "scrollSnapY": "",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
+              "states": "",
+              "localStyles": {
+                "objID": "14616386-d0fe-4142-ef52-f7122668f732",
+                "definition": {
+                  "MAIN": {
+                    "DEFAULT": {
+                      "text_font": "MONTSERRAT_30",
+                      "text_align": "RIGHT",
+                      "bg_color": "#d0d4c1"
+                    }
+                  }
+                }
+              },
+              "group": "",
+              "groupIndex": 0,
+              "text": "",
+              "textType": "literal",
+              "placeholder": "",
+              "oneLineMode": true,
+              "passwordMode": false,
+              "acceptedCharacters": "",
+              "maxTextLength": 128
+            }
+          ],
+          "widgetFlags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER",
+          "hiddenFlagType": "literal",
+          "clickableFlag": true,
+          "clickableFlagType": "literal",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
+          "states": "",
+          "localStyles": {
+            "objID": "8eb86917-c831-b762-5685-8d01972e8a22",
+            "definition": {
+              "MAIN": {
+                "DEFAULT": {
+                  "bg_color": "#213a5c",
+                  "border_width": 0,
+                  "border_color": "#876868"
+                }
+              }
+            }
+          },
+          "groupIndex": 0
+        }
+      ],
+      "connectionLines": [],
+      "localVariables": [],
+      "userProperties": [],
+      "name": "Main",
+      "left": 0,
+      "top": 0,
+      "width": 800,
+      "height": 480,
+      "createAtStart": true,
+      "deleteOnScreenUnload": false
+    }
+  ],
+  "userWidgets": [],
+  "lvglStyles": {
+    "objID": "a31bd004-35c5-b3fb-5c8b-78ea5c7693b8",
+    "styles": [],
+    "defaultStyles": {}
+  },
+  "lvglGroups": {
+    "objID": "f2f79c21-8769-ed90-c624-7405d4136ec9",
+    "groups": []
+  },
+  "fonts": [],
+  "bitmaps": [
+    {
+      "objID": "b4c23a70-64b2-47e1-f6fe-8904b56db5e5",
+      "name": "Mouse",
+      "image": "data:image/bmp;base64,Qk32IQAAAAAAADYAAAAoAAAAQAAAAC0AAAABABgAAAAAAMAhAADEDgAAxA4AAAAAAAAAAAAA1NTU39/f6enp4+Pj5+fn5+fn4uLi6enp4+Pj5eXl6Ojo4uLi6Ojo5eXl4+Pj6enp4uLi5+fn5+fn4+Pj6enp4+Pj5eXl6Ojo4uLi6Ojo5eXl4+Pj6enp4uLi5+fn5+fn4uLi6enp4+Pj5eXl6Ojo4uLi6Ojo5eXl4+Pj6enp4+Pj5+fn5+fn4uLi6enp4+Pj5eXl6Ojo4uLi6Ojo5eXl4+Pj6Ojo4uLi5+fn5+fn4uLi6enp4+Pj5eXl6Ojo3t7e39/f4+Pj5+fn5eXl5ubm5ubm5OTk5ubm5OTk5eXl5ubm5OTk5ubm5eXl5eXl5ubm5OTk5ubm5ubm5eXl5ubm5OTk5eXl5ubm5OTk5ubm5eXl5OTk5ubm5OTk5ubm5ubm5OTk5ubm5OTk4uLi4uLi4uLi5ubm5ubm5OTk5+fn5eXl5ubm5ubm5OTk5+fn5eXl5eXl5ubm5OTk5ubm5ubm5eXl5ubm5OTk5ubm5ubm5OTk5+fn5OTk5eXl5ubm4+Pj6enp5ubm5OTk5ubm5eXl5eXl5ubm5OTk5eXl5ubm5eXl5ubm5eXl5ubm5ubm5OTk5ubm5eXl5eXl5ubm5OTk5eXl5eXl5eXl5ubm5eXl5ubm5eXl5OTk5ubm5eXl5eXl5ubm5OTk3t7exMTEt7e3ycnJ2NjY4eHh5eXl5OTk5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5eXl5ubm5OTk5ubm5eXl5eXl5ubm5eXl5eXl5ubm5eXl5+fn4uLi5OTk5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5OTk5ubm5eXl5eXl5ubm5eXl5eXl5eXl5eXl5ubm5eXl5eXl5eXl5eXl5ubm5eXl5eXl5ubm5eXl5eXl5eXl5eXl4uLiw8PDfHx8WFhYc3Nznp6ev7+/1tbW4+Pj5OTk5eXl5eXl5eXl5ubm5eXl5eXl5eXl5OTk5eXl5eXl5eXl5eXl5eXl5eXl5eXl5OTk5ubm5eXl5eXl5eXl5OTk5ubm5ubm5eXl5ubm5eXl5eXl5ubm5eXl5eXl5eXl5eXl5eXl5eXl5ubm5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5ubm5eXl5ubm5eXl5eXl5eXl5eXl5ubm5eXl5eXl5eXl2NjYnZ2dPj4+FBQUHh4ePj4+aWlpoaGh09PT5OTk5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5eXl5eXl5eXl5eXl5eXl5ubm5+fn5ubm5eXl5ubm5ubm5eXl5ubm5eXl5eXl5eXl5eXl5ubm5eXl5ubm5ubm5eXl5ubm5ubm5ubm5ubm5eXl5ubm5ubm5eXl5ubm5eXl5eXl5eXl5eXl5ubm5eXl5eXl4+Pjx8fHc3NzHh4eAwMDAwMDCQkJIiIiampqwcHB4+Pj5eXl5eXl5ubm5eXl5ubm5ubm5eXl5ubm5eXl5ubm5ubm5eXl5ubm5eXl5eXl5ubm5eXl5eXl5eXl5eXl5+fn4uLi5OTk5ubm5eXl5ubm5ubm5eXl5ubm5eXl5ubm5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl3Nzcq6urSUlJDAwMAAAAAAAAAgICGxsbbm5ux8fH4uLi5ubm5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5eXl5ubm5OTk6enp5+fn5OTk5ubm5eXl5eXl5ubm5OTk5ubm5ubm5eXl5ubm5OTk5eXl5eXl5OTk5ubm5eXl5eXl5ubm5eXl5ubm4+Pj4uLi5eXl5OTk5eXl5eXl5OTk5ubm5eXl5OTkz8/PgYGBJiYmBAQEAAAAAAAABwcHNDQ0k5OT1dXV5eXl5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5eXl5ubm5OTk5ubm5eXl5OTk5ubm5OTk5ubm5ubm5eXl5+fn4+Pj5eXl5eXl5eXl5ubm5ubm5eXl5ubm5eXl5eXl5eXl5eXl5eXl5eXl5eXl5ubm5eXl5eXl5eXl5eXl5ubm4ODg0NDQy8vL2dnZ4+Pj5eXl5OTk5ubm5eXl5eXl39/fsrKyU1NTEBAQAQEBAAAAAQEBExMTWlpat7e34ODg5eXl5eXl5eXl5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5eXl5eXl5eXl5eXl5eXl5eXl5ubm5eXl5OTk5eXl5eXl5eXl5eXl5ubm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4uLi5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5ubm5OTk5ubm5eXl5eXl5ubm5eXl5eXl5eXl5eXl5ubm5eXl5eXl5eXl5eXl5ubm5eXl5eXl5ubm5OTk6enp5+fn5eXl5ubm5eXl5eXl5eXl5eXl5ubm5eXl5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm4eHhvLy8V1dXDg4OAQEBAAAAAAAAAQEBBwcHIyMjYWFhqqqq19fX4uLi5eXl5eXl5eXl5ubm5eXl5eXl5eXl5OTk5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5eXl5eXl5eXl5ubm5eXl5eXl5ubm5eXl5eXl5eXl5eXl5+fn5OTk5eXl5ubm5eXl5ubm5ubm5OTk5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5ubm5eXl4uLivLy8VlZWDQ0NAAAAAAAAAQEBCAgIJiYmZmZmrq6u2NjY4+Pj5ubm5eXl5eXl5eXl5eXl5ubm5eXl5eXl5eXl5OTk5ubm5ubm5eXl5ubm5eXl5eXl5eXl5OTk5eXl5eXl5eXl5ubm5eXl5eXl5eXl5eXl5ubm5eXl5eXl5ubm5eXl5OTk5eXl5ubm5eXl5eXl5eXl5OTk5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5eXl5eXl5eXl4uLivLy8VlZWDg4OAQEBAQEBCQkJKSkpa2trsrKy2dnZ5OTk5OTk5ubm5eXl5eXl5eXl5eXl5ubm5ubm5eXl5eXl5eXl5eXl5eXl5eXl5ubm5eXl5eXl5eXl5OTk5eXl5eXl5eXl5ubm5eXl5eXl5eXl5eXl5ubm5eXl5eXl5ubm5eXl6enp5ubm5eXl5eXl5eXl5eXl5eXl5eXl5ubm5eXl5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm4eHhvLy8V1dXDg4OAgICCgoKLCwscHBwtbW129vb4+Pj5eXl5eXl5eXl5ubm5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5eXl5ubm5eXl5ubm5ubm5eXl5+fn4uLi5OTk5ubm5OTk5eXl5eXl5OTk5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5ubm5eXl4+PjvLy8VVVVDw8PDAwMMDAwdHR0uLi43Nzc4+Pj5eXl5eXl5OTk5ubm5eXl5eXl5ubm5OTk5ubm5eXl5eXl5ubm5OTk5ubm5ubm5OTk5ubm5eXl5ubm5ubm5OTk5ubm5ubm5eXl5ubm5eXl5ubm5ubm5OTk5ubm5eXl5eXl5ubm5OTk5+fn5ubm5eXl5eXl5eXl5eXl5ubm5OTk5ubm5ubm5eXl5ubm5eXl5eXl5eXl5OTk5ubm5eXl5eXl5ubm4eHhvb29W1tbHR0dNjY2enp6vb293d3d5OTk5ubm5eXl5eXl5eXl5OTk5ubm5eXl5OTk5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5OTk5eXl5eXl5eXl5+fn5eXl5ubm5eXl5eXl5eXl5eXl5eXl5eXl5eXl5ubm5ubm5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl4+Pjx8fHe3t7VVVVg4ODwMDA3t7e5OTk5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5ubm5ubm5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5ubm5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5ubm5eXl5ubm4+Pj5eXl5ubm5eXl5eXl5eXl5eXl5eXl5eXl5eXl5ubm5eXl5ubm5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl2dnZubm5rKysyMjI39/f5OTk5eXl5eXl5eXl5eXl5eXl5eXl5ubm5eXl5eXl5eXl5eXl5ubm5eXl5eXl5eXl5eXl5eXl5eXl5eXl5ubm5eXl5ubm5ubm5eXl5ubm5eXl5eXl5ubm5eXl5eXl5eXl5eXl5ubm5eXl5eXl5eXl5OTk6enp5+fn5eXl5ubm5eXl5eXl5ubm5OTk5ubm5eXl5eXl5ubm5eXl5eXl5ubm5OTk5ubm5eXl5eXl5ubm5OTk5OTk39/f3d3d4+Pj5eXl5eXl5ubm5OTk5ubm5eXl5eXl5ubm5eXl5ubm5eXl5OTk5ubm5eXl5eXl5eXl5OTk5ubm5eXl5eXl5ubm5eXl5ubm5ubm5eXl5ubm5eXl5ubm5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5+fn4uLi5OTk5ubm5eXl5ubm5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5OTk5ubm5ubm5OTk5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5ubm5eXl5ubm5eXl5ubm5ubm5OTk5ubm5ubm5eXl5ubm5eXl5ubm5ubm5eXl5ubm5eXl5eXl5ubm5OTk6enp5ubm5eXl5ubm5eXl5eXl5ubm5OTk5ubm5ubm5eXl5ubm5eXl5ubm5ubm5OTk5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5ubm5eXl5ubm5eXl5eXl5eXl5OTk5ubm5ubm5eXl5ubm5eXl5ubm5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5eXl5eXl5ubm5eXl5ubm5ubm5eXl5+fn9fX16+vr4+Pj6Ojo5OTk5OTk6Ojo4uLi5+fn5ubm5OTk6Ojo4+Pj5ubm6Ojo4uLi6Ojo5OTk5OTk6Ojo4uLi5+fn5ubm4+Pj6Ojo4+Pj5eXl6Ojo4+Pj6Ojo5eXl5OTk5+fn4uLi5+fn5ubm4+Pj6Ojo4+Pj5ubm5+fn4+Pj6Ojo5OTk5OTk6Ojo4+Pj5+fn5ubm4+Pj6enp4+Pj5ubm5+fn4+Pj6Ojo5OTk5OTk6Ojo4+Pj5+fn5ubm4+Pj7Ozs",
+      "bpp": 32,
+      "alwaysBuild": false,
+      "lvglBinaryOutputFormat": 3,
+      "lvglDither": false
+    },
+    {
+      "objID": "4b970722-214b-4f94-a8e6-5105bd27e5b4",
+      "name": "Cursor",
+      "image": "data:image/png;base64,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",
+      "bpp": 32,
+      "alwaysBuild": false,
+      "lvglBinaryOutputFormat": 3,
+      "lvglDither": false
+    }
+  ],
+  "colors": [],
+  "themes": [
+    {
+      "objID": "ed882da1-8496-e314-059f-7473f6a898ba",
+      "name": "Default",
+      "colors": []
+    }
+  ]
+}
