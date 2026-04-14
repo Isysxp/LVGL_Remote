@@ -24,8 +24,8 @@
 #include "RemoteDisplay.h"
 extern RemoteDisplay remoteDisplay;
 
-#define INFRA_SSID "BT-Q6CTR8"
-#define INFRA_PSWD "c531a3d358"
+#define INFRA_SSID "<Your SSID>"
+#define INFRA_PSWD "<Your Password"
 
 static float rslt = 0.0;
 static int inptr = 0;
