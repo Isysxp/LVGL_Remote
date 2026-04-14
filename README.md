@@ -17,5 +17,8 @@ developers have spent some time minimising the amount of data that needs to be s
 TFT module can be updated quite quickly.
 This app have been specifically configured to:
 1. The app expects the ESP32 server to be registered with DNS with the name 'Calulator'
-2. The USD port is set to 2400.
-3. The app displays a PictureBox of size 800x480 and this is used to define the ESP32 display device.
+2. The USB port is set to 2400.
+3. The app displays a PictureBox of size 800x480 and this is used in the definition of the ESP32 display device.
+I have included in this repo an example Arduino app for and ESP32 device. This device does not need an attached
+TFT but does need an ESP32 with an OTG USB port. This allows for a USB mouse to be plugged in as an LVGL pointer device.
+In fact USB mouse is optional 
