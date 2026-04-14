@@ -21,8 +21,6 @@
 #include <math.h>
 #include <Esp.h>
 #include <WiFi.h>
-#include "EspUsbHost.h"
-#include "MouseLVGL.h"
 #include "RemoteDisplay.h"
 extern RemoteDisplay remoteDisplay;
 
@@ -129,10 +127,6 @@ void setup() {
 	remoteDisplay.registerRefreshCallback(refreshDisplayCallback);
 	remoteDisplay.init(800, 480, 2400);
 	Serial.println("/Calculator");
-	//udp.onPacket(onPacket);
-	//udp.listen(1000);
-	Mouse.begin();
-	Mouse.useLVGL();
 	Serial.println("Running....");
 }
 
@@ -140,6 +134,5 @@ void loop() {
 	lv_timer_handler();
 	ui_tick();
 	delay(5);
-	Mouse.loop();
 	remoteDisplay.pollRemoteCommand();
 }

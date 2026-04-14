@@ -191,17 +191,5 @@ void my_disp_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color
   lv_disp_flush_ready(disp);
 }
 
-void my_touch_read(lv_indev_drv_t *indev_driver, lv_indev_data_t *data) {
-  uint16_t touchX, touchY;
-  bool touched = tft.getTouch(&touchX, &touchY);
-  if (!touched) {
-    data->state = LV_INDEV_STATE_REL;
-  } else {
-    data->state = LV_INDEV_STATE_PR;
-    data->point.x = touchX;
-    data->point.y = touchY;
-  }
-}
-
 
 #endif  // _DISPLAY_STUFF_H
