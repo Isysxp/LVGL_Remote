@@ -17,6 +17,7 @@ Public Class Form1
     Dim udpRec As UdpClient
     Dim remoteEndPoint As IPEndPoint
     Dim Init() As Byte = {2, 0, 0, 0, 0}
+    Dim Disconnect() As Byte = {3, 0, 0, 0, 0}
     Dim Bmp As Bitmap
     Dim Bcopy As Bitmap
     Dim PixelCount As Integer = 0
@@ -54,9 +55,14 @@ Public Class Form1
         remoteEndPoint = New IPEndPoint(remoteIP, 2400)
         udpSend = New UdpClient("calculator", 2400)
         udpRec = New UdpClient(2400)
+        udpSend.Send(Disconnect, 5)
+        While udpRec.Available > 0
+            Dim remoteEP As New IPEndPoint(IPAddress.Any, 0)
+            udpRec.Receive(remoteEP) ' Discard packet
+        End While
         udpRec.Client.ReceiveTimeout = 1000
-        udpSend.Send(Init, 5)
         udpRec.BeginReceive(AddressOf ReceiveCallback, Nothing)
+        udpSend.Send(Init, 5)
     End Sub
 
     Function RGB565ToARGB32(rgb565 As UShort) As Color
@@ -140,5 +146,9 @@ Public Class Form1
 
     Private Sub PictureBox1_Paint(sender As Object, e As PaintEventArgs) Handles PictureBox1.Paint
         PictureBox1.Image = CType(Bcopy, System.Drawing.Image)
+    End Sub
+
+    Private Sub Form1_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        udpSend.Send(Disconnect, 5)
     End Sub
 End Class
