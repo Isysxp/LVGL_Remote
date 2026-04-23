@@ -1,5 +1,6 @@
 # LVGL_Remote. A remote LVGL screen viewer for an ESP32 server
 
+# Development enviroments: Visual Studio 2022 and Arduino IDE
 I built this app more for idle curiosity rather then being practically useful. It is effectively
 a VNC like client app to connect to a VNC like server app running on an ESP32. The primary use case for
 LVGL is to create a responsive UI on a local display device eg a TFT. There are numerous examples as to
