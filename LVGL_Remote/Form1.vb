@@ -82,19 +82,20 @@ Public Class Form1
 
     Private Sub ReceiveCallback(ar As IAsyncResult)
         Dim data As Byte() = udpRec.EndReceive(ar, remoteEndPoint)
+
         Header.Control = BinaryPrimitives.ReadInt16LittleEndian(data.AsSpan(0))
         If data.Length = 12 Then
-            Header.Width = BinaryPrimitives.ReadInt16LittleEndian(data.AsSpan(2))
-            Header.Height = BinaryPrimitives.ReadInt16LittleEndian(data.AsSpan(4))
-            Header.Extra = BinaryPrimitives.ReadUInt32LittleEndian(data.AsSpan(6))
+            Header.Width = BitConverter.ToInt16(data, 2)
+            Header.Height = BitConverter.ToInt16(data, 4)
+            Header.Extra = BitConverter.ToInt32(data, 6)
             PixelCount = Header.Extra
         End If
         If Header.Control = 2 Then
-            Rle.X = BinaryPrimitives.ReadInt16LittleEndian(data.AsSpan(2))
-            Rle.Y = BinaryPrimitives.ReadInt16LittleEndian(data.AsSpan(4))
-            Rle.Width = BinaryPrimitives.ReadInt16LittleEndian(data.AsSpan(6))
-            Rle.Height = BinaryPrimitives.ReadInt16LittleEndian(data.AsSpan(8))
-            Rle.Progress = BinaryPrimitives.ReadUInt32LittleEndian(data.AsSpan(10))
+            Rle.X = BitConverter.ToInt16(data, 2)
+            Rle.Y = BitConverter.ToInt16(data, 4)
+            Rle.Width = BitConverter.ToInt16(data, 6)
+            Rle.Height = BitConverter.ToInt16(data, 8)
+            Rle.Progress = BitConverter.ToInt32(data, 10)
             Ndx = Marshal.SizeOf(Rle)
             'Debug.Print("RLE.X:{0} Index:{1} RLE.Y:{2} Progress:{3}", Rle.X, Ndx, Rle.Y, Progress)
             XNdx = Rle.Progress
@@ -137,7 +138,8 @@ Public Class Form1
     End Sub
 
     Private Sub PictureBox1_MouseUp(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseUp
-        PictureBox1_MouseMove(sender, e)
+        Dim lc As MouseEventArgs = New MouseEventArgs(MouseButtons.None, e.Clicks, e.X, e.Y, e.Delta)
+        PictureBox1_MouseMove(sender, lc)
     End Sub
 
     Private Sub PictureBox1_MouseDown(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseDown
