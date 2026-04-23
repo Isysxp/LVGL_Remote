@@ -20,7 +20,7 @@ This app have been specifically configured to:
 2. The USB port is set to 2400.
 3. The app displays a PictureBox of size 800x480 and this is used in the definition of the ESP32 display device.
 I have included in this repo an example Arduino app for an ESP32 device (a Calculator). This device does not need an attached
-TFT. I strongly suggest using an ESP32-S3. You will need to upadate this test app. Specifically:
+TFT. I strongly suggest using an ESP32-S3. You will need to update this test app. Specifically:
 1. Adjust the SSID and Password to match your WiFi network.
 2. In the Arduino IDE check for the following libraries:<br>
    a. LovyanGFX 1.2.19<br>
