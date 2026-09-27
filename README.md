@@ -18,7 +18,7 @@ developers have spent some time minimising the amount of data that needs to be s
 TFT module can be updated quite quickly.
 This app have been specifically configured to:
 1. The app expects the ESP32 server to be registered with DNS with the name 'Calculator'
-2. The USB port is set to 2400.
+2. The UDP port is set to 2400.
 3. The app displays a PictureBox of size 800x480 and this is used in the definition of the ESP32 display device.
 I have included in this repo an example Arduino app for an ESP32 device (a Calculator). This device does not need an attached
 TFT. I strongly suggest using an ESP32-S3. You will need to update this test app. Specifically:
